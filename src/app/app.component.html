@@ -1,0 +1,38 @@
+<div class="body">
+<p>Reactive Form Example</p>
+<button mat-raised-button color="primary" (click)="add()">Add User</button>
+</div>
+
+<!-- <button mat-raised-button color="primary" (click)="edits()">edit User</button> -->
+
+<router-outlet></router-outlet>
+
+
+<table class="table table-hover table-responsive">
+  <thead class="table-dark ">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Company</th>
+      <th>Gender</th>
+      <th>Date</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of Display_list;let i = index">
+      <td>{{data.first_name}}</td>
+      <td>{{data.last_name}}</td>
+      <td>{{data.email}}</td>
+      <td>{{data.phone}}</td>
+      <td>{{data.company}}</td>
+      <td>{{data.gender}}</td>
+      <td>{{data.dob|date}}</td>
+      <td><button mat-raised-button color="primary" (click)="edit(i)">Edit</button></td>
+      <td><button mat-raised-button color="primary" (click)="delete(i)">Delete</button></td>    
+    </tr>
+  </tbody>
+</table>

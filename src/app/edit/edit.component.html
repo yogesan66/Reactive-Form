@@ -1,0 +1,76 @@
+<div class="body">
+<form [formGroup]="editForm" #form="ngForm">
+
+  <mat-form-field  appearance="fill">
+  <mat-label>First Name</mat-label>
+  <input type="text" matInput #input formControlName="first_name" >
+  <mat-hint align="end"></mat-hint>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input type="text" matInput #input formControlName="last_name" >
+    <mat-hint align="end"></mat-hint>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput #input formControlName="email">
+      <mat-hint align="end"></mat-hint>
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>Phone</mat-label>
+        <input type="number" matInput #input maxlength="10" minlength="10" formControlName="phone">
+        <mat-hint align="end"></mat-hint>
+        </mat-form-field>
+  
+        <mat-form-field  appearance="fill">
+          <mat-label>Company</mat-label>
+          <input type="text" matInput #input formControlName="company">
+          <mat-hint align="end"></mat-hint>
+          </mat-form-field>
+  
+          <br>
+          <label>Gender</label>
+          <br>
+  
+          <mat-radio-group aria-label="Gender" formControlName="gender">
+            <mat-radio-button value="male" color="primary">Male</mat-radio-button>
+            <mat-radio-button value="female" color="primary">Female</mat-radio-button>
+          </mat-radio-group>
+  
+          <mat-form-field appearance="fill" class="calender">
+            <mat-label>DOB</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dob">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field  appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput #input minlength="5" formControlName="password"> 
+            <mat-hint align="end">Min 5 Characters</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field  appearance="fill">
+              <mat-label>Confirm Password</mat-label>
+              <input type="password" matInput #input minlength="5" formControlName="confirm_password">
+              <mat-hint align="end">Min 5 Characters</mat-hint>
+              </mat-form-field>
+              
+              <div>
+              <span>
+                <button [disabled]="!form.valid" (click)="Update()" mat-raised-button color="primary">Update</button>
+              </span>
+              <span>
+                <button (click)="cancel()" mat-raised-button color="primary">Cancel</button>
+              </span>
+              </div>
+  
+  </form>
+  
+  
+</div>
+

@@ -1,0 +1,13 @@
+p {
+  font-family: Lato;
+}
+table {
+  width: 100%;
+}
+.body{
+  margin:20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

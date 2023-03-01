@@ -1,0 +1,42 @@
+::ng-deep mat-radio-button{
+  padding-right:30px;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
+label{
+  font-size: 17px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width:300px;
+  box-shadow:2px 0px 10px 1px black;
+  padding:20px;
+  border-radius: 5px;
+  margin:10px;
+}
+
+span{
+  margin-right:40px;
+}
+.body{
+  margin:20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.calender{
+  width:200px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  float: right !important;
+}
+
+:ng-deep mat-datepicker-toggle {
+  float:right;
+
+}
